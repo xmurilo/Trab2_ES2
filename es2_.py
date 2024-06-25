@@ -1,41 +1,38 @@
-def fazerpergunta(pergunta, opcoes, respostacorreta):
-    print(pergunta)
-    for i, opcao in enumerate(opcoes, 1):
-        print(f"{i}. {opcao}")
-    resposta = input("Digite o número da sua resposta: ")
+# Bruno: Criando a classe de Quiz de Esportes com um construtor com as perguntas, opções, respostas corretas e o score.
+class QuizDeEsportes:
+    def __init__(self):
+        self.perguntas = [
+            {
+                "pergunta": "Qual país ganhou a Copa do Mundo de 2018?",
+                "opcoes": ["Brasil", "Alemanha", "França", "Argentina"],
+                "resposta_correta": "França"
+            },
+            {
+                "pergunta": "Quem detém o recorde de mais pontos em um único jogo da NBA?",
+                "opcoes": ["Michael Jordan", "LeBron James", "Kobe Bryant", "Wilt Chamberlain"],
+                "resposta_correta": "Wilt Chamberlain"
+            },
+            {
+                "pergunta": "Quantos jogadores há em um time de futebol?",
+                "opcoes": ["9", "10", "11", "12"],
+                "resposta_correta": "11"
+            }
+        ]
+        self.score = 0
 
-    if resposta == respostacorreta:
-        print("Resposta correta!")
-        return True
-    else:
-        print("Resposta errada!")
-        return False
+    def fazerpergunta(pergunta, opcoes, respostacorreta):
+        print(pergunta)
+        for i, opcao in enumerate(opcoes, 1):
+            print(f"{i}. {opcao}")
+        resposta = input("Digite o número da sua resposta: ")
 
-def quizde_esportes():
-    perguntas = [
-        {
-            "pergunta": "Qual país ganhou a Copa do Mundo de 2018?",
-            "opcoes": ["Brasil", "Alemanha", "França", "Argentina"],
-            "resposta_correta": "França"
-        },
-        {
-            "pergunta": "Quem detém o recorde de mais pontos em um único jogo da NBA?",
-            "opcoes": ["Michael Jordan", "LeBron James", "Kobe Bryant", "Wilt Chamberlain"],
-            "resposta_correta": "Wilt Chamberlain"
-        },
-        {
-            "pergunta": "Quantos jogadores há em um time de futebol?",
-            "opcoes": ["9", "10", "11", "12"],
-            "resposta_correta": "11"
-        }
-    ]
+        if resposta == respostacorreta:
+            print("Resposta correta!")
+            return True
+        else:
+            print("Resposta errada!")
+            return False
 
-    score = 0
-    for p in perguntas:
-        if fazer_pergunta(p["pergunta"], p["opcoes"], p["resposta_correta"]):
-            score += 1
-
-    print(f"Você acertou {score} de {len(perguntas)} perguntas.")
-
-if __name == "__main":
-    quiz_de_esportes()
+if __name__ == "__main__":
+    quiz = QuizDeEsportes() #Bruno: Cria um objeto da classe QuizDeEsportes.
+    quiz.iniciar_quiz()
