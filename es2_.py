@@ -26,11 +26,17 @@ class QuizDeEsportes:
             print(f"{i}. {opcao}")
         resposta = input("Digite o número da sua resposta: ")
 
-        if resposta == respostacorreta:
-            print("Resposta correta!")
-            return True
-        else:
-            print("Resposta errada!")
+        # * Murilo: Refatorando o código para tratar exceções e evitar erros de execução.
+        try:
+            resposta = int(resposta)
+            if opcoes[resposta - 1] == resposta_correta:
+                print("Resposta correta!")
+                return True
+            else:
+                print("Resposta errada!")
+                return False
+        except (ValueError, IndexError):
+            print("Entrada inválida! Por favor, digite um número válido.")
             return False
 
 if __name__ == "__main__":
