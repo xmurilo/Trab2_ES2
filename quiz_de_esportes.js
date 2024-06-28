@@ -1,4 +1,4 @@
-import prompt from "prompt-sync";
+const prompt = require("prompt-sync")();
 // Bruno: Criando a classe de Quiz de Esportes com um construtor com as perguntas, opções, respostas corretas e o score.
 class QuizDeEsportes {
     constructor() {
