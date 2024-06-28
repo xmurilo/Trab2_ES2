@@ -50,12 +50,15 @@ class QuizDeEsportes {
         this.perguntas.forEach(pergunta => {
             if (this.fazerPergunta(pergunta.pergunta, pergunta.opcoes, pergunta.resposta_correta)) {
                 this.score++;
+                console.log(this.score)
             }
         });
 
         console.log(`Você acertou ${this.score} de ${this.perguntas.length} perguntas.`);
     }
 }
+
+module.exports = QuizDeEsportes;
 
 const quiz = new QuizDeEsportes();
 quiz.iniciarQuiz();
