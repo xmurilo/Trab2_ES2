@@ -1,3 +1,4 @@
+# Bruno: Criando a classe de Quiz de Esportes com um construtor com as perguntas, opções, respostas corretas e o score.
 class QuizDeEsportes:
     def __init__(self):
         self.perguntas = [
