@@ -24,7 +24,7 @@ class QuizDeEsportes:
         for i, opcao in enumerate(opcoes, 1):
             print(f"{i}. {opcao}")
         resposta = input("Digite o número da sua resposta: ")
-
+         # * Murilo: Refatorando o código para tratar exceções e evitar erros de execução.
         try:
             resposta = int(resposta)
             if opcoes[resposta - 1] == resposta_correta:
