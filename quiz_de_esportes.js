@@ -1,3 +1,4 @@
+import prompt from "prompt-sync";
 // Bruno: Criando a classe de Quiz de Esportes com um construtor com as perguntas, opções, respostas corretas e o score.
 class QuizDeEsportes {
     constructor() {
@@ -24,7 +25,7 @@ class QuizDeEsportes {
     fazerPergunta(pergunta, opcoes, respostaCorreta) {
         console.log(pergunta);
         opcoes.forEach((opcao, index) => {
-            console.log(`\${index + 1}. \${opcao}`);
+            console.log(`${index + 1}. ${opcao}`);
         });
         const resposta = prompt("Digite o número da sua resposta: ");
         
