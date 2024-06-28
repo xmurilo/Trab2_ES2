@@ -29,14 +29,20 @@ class QuizDeEsportes {
         });
         const resposta = prompt("Digite o número da sua resposta: ");
         
-        // # * Murilo: Refatorando o código para tratar exceções e evitar erros de execução.
-        try {
+         // # * Murilo: Refatorando o código para tratar exceções e evitar erros de execução.
+         try {
             const respostaNum = parseInt(resposta);
-            if (opcoes[respostaNum - 1] === respostaCorreta) {
-                console.log("Resposta correta!");
-                return true;
+            if (respostaNum >= 1 && respostaNum <= opcoes.length) {
+                const respostaEscolhida = opcoes[respostaNum - 1];
+                if (respostaEscolhida === respostaCorreta) {
+                    console.log("Resposta correta!");
+                    return true;
+                } else {
+                    console.log("Resposta errada!");
+                    return false;
+                }
             } else {
-                console.log("Resposta errada!");
+                console.log("Entrada inválida! Por favor, digite um número válido.");
                 return false;
             }
         } catch (e) {
@@ -44,13 +50,13 @@ class QuizDeEsportes {
             return false;
         }
     }
+    
 
     // Lucas: Adicionando um método para iniciar o quiz e percorrer todas as perguntas.
     iniciarQuiz() {
         this.perguntas.forEach(pergunta => {
             if (this.fazerPergunta(pergunta.pergunta, pergunta.opcoes, pergunta.resposta_correta)) {
                 this.score++;
-                console.log(this.score)
             }
         });
 
