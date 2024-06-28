@@ -53,7 +53,7 @@ class QuizDeEsportes {
             }
         });
 
-        console.log(`Você acertou \${this.score} de \${this.perguntas.length} perguntas.`);
+        console.log(`Você acertou ${this.score} de ${this.perguntas.length} perguntas.`);
     }
 }
 
