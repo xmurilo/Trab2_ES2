@@ -29,7 +29,7 @@ class QuizDeEsportes:
         # * Murilo: Refatorando o código para tratar exceções e evitar erros de execução.
         try:
             resposta = int(resposta)
-            if opcoes[resposta - 1] == resposta_correta:
+            if opcoes[resposta - 1] == respostacorreta:
                 print("Resposta correta!")
                 return True
             else:
