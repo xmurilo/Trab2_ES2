@@ -37,7 +37,7 @@ class QuizDeEsportes:
         except (ValueError, IndexError):
             print("Entrada inválida! Por favor, digite um número válido.")
             return False
-    
+    # Lucas: Adicionando um método para iniciar o quiz e percorrer todas as perguntas.
     def iniciar_quiz(self):
         for pergunta in self.perguntas:
             if self.fazer_pergunta(pergunta["pergunta"], pergunta["opcoes"], pergunta["resposta_correta"]):
