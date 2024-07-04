@@ -50,7 +50,6 @@ class QuizDeEsportes {
         this.perguntas.forEach(pergunta => {
             if (this.fazerPergunta(pergunta.pergunta, pergunta.opcoes, pergunta.resposta_correta)) {
                 this.score++;
-                console.log(this.score)
             }
         });
 
