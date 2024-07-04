@@ -1,13 +1,13 @@
 # Prints dos códigos sujos e posteriormente refatorados;
 ## Código sujo
-![alt text](codigo_sujo.jpeg)
+![alt text](./images/codigo_sujo.jpeg)
 
 ## Código refatorado 1
-![alt text](./codigo_limpo1.png)
+![alt text](./images/codigo_limpo1.png)
 ## Código refatorado 2
-![alt text](./codigo_limpo2.png)
+![alt text](./images/codigo_limpo2.png)
 ## Código refatorado 3
-![alt text](./codigo_limpo3.png)
+![alt text](./images/codigo_limpo3.png)
 
 # Descrição da ferramenta de testes utilizada;
  Foi utilizado o Jest para realizar os testes unitários da aplicação.
@@ -22,4 +22,4 @@ node quiz_de_esportes.js
 ````
 
 # Prints dos testes realizados;
-![alt text](print_testes.png)
+![alt text](./images/print_testes.png)
